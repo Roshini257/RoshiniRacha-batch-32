@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<title>
+  Assignment2
+</title>
+<head>
+  
+  
+</head>
+<body>
+<label>Enter the Amount:</label>
+<input type="number" id="a">
+  <button onclick="processAmount()">Submit</button><br><br>
+
+  
+  
+  <label>Enter the environment: </label>
+<input type="text" id="myInput">
+  <button onclick="processInput()">Submit</button>
+  
+  <p>Amount sent is :</p>
+  <output type="number" id="output">
+
+
+
+  <script>
+   var amount;
+    let sentAmount;
+    let env ;
+    function log(v){
+            console.log(v)
+        
+    }
+
+    function processAmount() {
+      amount = document.getElementById("a").value;
+      log(amount);
+      }
+      
+     // console.log("Amount is:",amount);
+    function processInput() {
+      var env = document.getElementById("myInput").value;
+      log(env);
+
+      if (env == "dev"){
+        sentAmount = +amount + amount * 0.1;
+          log("Amount sent is:" +sentAmount);
+
+          document.getElementById("output").innerHTML = sentAmount;
+
+          
+       } else if(env == "test"){
+         sentAmount = amount + amount * 0.2;
+         log("Amount sent is:" +sentAmount);
+      }else if(env == "stage") {
+       
+        sentAmount = amount + amount * 0.3;
+         log("Amount sent is:" +sentAmount);
+         document.getElementById("output").innerHTML = sentAmount;
+
+      }
+      else if(env == "prod"){
+        sentAmount = amount + amount * 0.05;
+         log("Amount sent is:" +sentAmount);
+         document.getElementById("output").innerHTML = sentAmount;
+
+      }else {
+        log("value not valid")
+      }
+    }
+      
+
+
+    //   switch (env){
+    //     case "dev":
+    //       sentAmount = amount + amount * 0.1;
+    //       console.log("Amount sent is:" +sentAmount);
+    //       break;
+
+    //       case "test":
+    //       sentAmount = amount + amount * 0.2;
+    //       log("Amount sent is:" +sentAmount);
+    //       break;
+
+    //       case "stage":
+    //       sentAmount = amount + amount * 0.3;
+    //       log("Amount sent is:" +sentAmount);
+    //       break;
+
+    //       case "prod":
+    //       sentAmount= amount + amount * 0.05;
+    //       log("Amount sent is:" +sentAmount);
+          
+
+    //       break;
+    //       default:
+    //       log("Value entered is invalid");
+
+
+    // }
+   
+  
+
+   
+   
+
+
+
+
+
+
+   
+  
+  
+  </script>
+
+</body>
+
