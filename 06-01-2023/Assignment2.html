@@ -9,13 +9,13 @@
 <body>
 <label>Enter the Amount:</label>
 <input type="number" id="a">
-  <button onclick="processAmount()">Submit</button><br><br>
+  <button onclick="submitAmount()">Submit</button><br><br>
 
   
   
   <label>Enter the environment: </label>
 <input type="text" id="myInput">
-  <button onclick="processInput()">Submit</button>
+  <button onclick="submitInput()">Submit</button>
   
   <p>Amount sent is :</p>
   <output type="number" id="output">
@@ -31,13 +31,13 @@
         
     }
 
-    function processAmount() {
+    function submitAmount() {
       amount = document.getElementById("a").value;
       log(amount);
       }
       
      // console.log("Amount is:",amount);
-    function processInput() {
+    function submitInput() {
       var env = document.getElementById("myInput").value;
       log(env);
 
@@ -49,17 +49,17 @@
 
           
        } else if(env == "test"){
-         sentAmount = amount + amount * 0.2;
+         sentAmount = +amount + amount * 0.2;
          log("Amount sent is:" +sentAmount);
       }else if(env == "stage") {
        
-        sentAmount = amount + amount * 0.3;
+        sentAmount = +amount + amount * 0.3;
          log("Amount sent is:" +sentAmount);
          document.getElementById("output").innerHTML = sentAmount;
 
       }
       else if(env == "prod"){
-        sentAmount = amount + amount * 0.05;
+        sentAmount = +amount + amount * 0.05;
          log("Amount sent is:" +sentAmount);
          document.getElementById("output").innerHTML = sentAmount;
 
