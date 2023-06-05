@@ -1,0 +1,88 @@
+<html>
+    <head>
+
+
+    </head>
+    <body>
+        <script>
+            var newArray = ["listening", "b"];
+            var elementToDelete = {cooking:'Indian'};
+
+        //    var updatedList = add(newArray);
+        //     console.log(updatedList);
+
+            var Myself = [{
+                fname: 'Roshini',
+                lname: 'Racha',
+                DOB: '25-12-1997',
+                Gender:'F',
+                Email: 'roshini.racha25@gmail.com',
+                Phoneno: '312-476-9163',
+                hobbies: [{reading:'novels',
+                    sport:'badminton'},
+                    {cooking:'Indian'}, "dancing"
+                ],               
+                Address:'MckinneyTX',
+                Height: '5.2feet',
+                Nationality: 'Indian'
+                
+            }]
+            var existingList;
+            var x;
+            const msg ="This the deleted hobby";
+           
+           print();
+           add();
+           del();
+
+           function print(){
+              existingList = Myself[0].hobbies;
+           log(existingList);
+           }
+
+           
+            
+    function add()
+     { x= [...existingList,...newArray]
+    log(x);}
+
+ function del(){
+
+var filteredArray = x.filter(function (obj)
+{
+    return obj.cooking !== elementToDelete.cooking;
+});
+console.log(filteredArray);
+}
+console.log(msg,elementToDelete);
+
+            function log(v){
+               console.log(v);
+        
+               
+   }
+//     var l = Myself[0].hobbies.length;
+//     console.log(l);
+//     log(Myself[0].hobbies[l-2]);
+
+//           add(newArray); 
+// function add(newArray) {
+//   existingList.push(newArray);
+//   return existingList;
+//   console.log('new list is', existingList);
+// }
+
+// function add(existingList,newArray) {
+//   existingList.push(newArray);
+//   return existingList;
+// }
+    
+
+    
+        
+            
+    
+        </script>
+
+    </body>
+</html>
