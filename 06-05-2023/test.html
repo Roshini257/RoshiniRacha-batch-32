@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+
+<label>Enter your first name :</label>
+<p><input type="text" id="FN" ></p>
+
+<label>Enter your last name:</label>
+<p><input type="text" id="LN" ></p>
+
+<label>Enter your DOB:</label>
+<p><input type="date" id="DOB" ></p>
+
+<label>Enter your email address:</label>
+<p><input type="text" id="Email" ></p>
+
+<button onclick="myProfile()">Submit</button> 
+ 
+<p id="firstname"></p>
+
+<p id="lastname"></p>
+<p id="dob"></p>
+<p id="email"></p>
+
+<!-- <p id="demo"></p> -->
+
+
+ 
+
+<script>
+    function myProfile(){
+         let f= document.getElementById("FN").value;
+         log(f);
+         let l= document.getElementById("LN").value;
+         log(l);
+
+
+         let d= document.getElementById("DOB").value;
+         log(d);
+         let e= document.getElementById("Email").value;
+         log(e);
+
+
+        document.getElementById("firstname").innerHTML = "First name is:"+f;
+        document.getElementById("lastname").innerHTML = "Last name is :" +l;
+        document.getElementById("dob").innerHTML = "DOB is:" +d;
+        document.getElementById("email").innerHTML = "Email id is:" +e;
+
+
+        //   document.getElementsByClassName("demo").innerHTML = "First name is:"+f;
+        // document.getElementsByClassName("demo").innerHTML = "Last name is :" +l;
+        // document.getElementsByClassName("demo").innerHTML = "DOB is:" +d;
+        // document.getElemegetElementsByClassNamentById("demo").innerHTML = "Email is:" +e;
+
+
+
+
+    }
+
+    function log(x){
+        console.log(x);
+    }
+</script>
+
+</body>
+</html> 
+
