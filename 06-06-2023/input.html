@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+<body>
+
+<!-- <form id="formId"> -->
+<label for="FN">Enter your first name :</label>
+<p><input type="text" id="FN" ></p>
+
+<label for="LN">Enter your last name:</label>
+<p><input type="text" id="LN" ></p>
+
+<label for="DOB">Enter your DOB:</label>
+<p><input type="date" id="DOB" ></p>
+
+<label for="Email">Enter your email address:</label>
+<p><input type="email" id="Email" ></p>
+
+<label>Phone number :</label>
+<input type="tel" id="phone"/></br>
+
+<label>Select Gender:</label>
+<input type="radio" id="male" name="x" value="Male">
+<label for="male"> Male</label><br>
+<input type="radio" id="female" name="x" value="Female">
+<label for="female"> Female</label><br>
+
+<label>Check your hobbies:</label>
+<input type="checkbox" id="hob1" name="cookingname" value="Cooking">
+  <label for="cooking">Cooking</label><br>
+  <input type="checkbox" id="hob2" name="sportname" value="Sport">
+  <label for="sport">Sport</label><br>
+  <input type="checkbox" id="hob3" name="rname" value="Reading">
+  <label for="reading">Reading  </label><br><br>
+
+  <button onclick="myProfile()">submit</button>
+<p id="firstname"></p>
+<p id="lastname"></p>
+<p id="dob"></p>
+<p id="email"></p>
+<p id="phn"></p>
+<p id="gender"></p>
+<p id="hobby"></p>
+<p id="hobby1"></p>
+<p id="hobby2"></p>
+<p id="hobby3"></p>
+<!-- </form> -->
+
+<script>
+    function myProfile(){
+         let fn= document.getElementById("FN").value;
+         log(fn);
+         let l= document.getElementById("LN").value;
+         log(l);
+         let d= document.getElementById("DOB").value;
+         log(d);
+         let e= document.getElementById("Email").value;
+         log(e);
+        let p=document.getElementById('phone').value;
+         log(p);
+         let m=document.getElementById("male").value;
+         log(m);
+         let f=document.getElementById("female").value;
+         log(f);
+         let g;
+         if(document.getElementById("female").checked==true){
+                    g="Female";
+                    
+                }
+         else if(document.getElementById("male").checked==true){
+                    g="Male";
+                }
+                
+         log(g);
+
+
+        let h1,h2,h3;
+
+        if(document.getElementById("hob1").checked==true){
+                    h1=document.getElementById("hob1").value
+                    log(h1);
+                    
+                }
+         else h1=" ";
+         
+         if(document.getElementById("hob2").checked==true){
+            h2=document.getElementById("hob2").value
+            log(h2);
+
+                }else h2="";
+                
+                if(document.getElementById("hob3").checked==true){
+            h3=document.getElementById("hob3").value
+            log(h3);
+
+
+                }else h3="";
+
+
+
+
+
+
+        document.getElementById("firstname").innerHTML = "First name is:"+fn;
+        document.getElementById("lastname").innerHTML = "Last name is :" +l;
+        document.getElementById("dob").innerHTML = "DOB is:" +d;
+        document.getElementById("email").innerHTML = "Email id is:" +e;
+        document.getElementById("phn").innerHTML="phone number "+p;
+        document.getElementById("gender").innerHTML="Gender is : "+g;
+
+        if(h1!=null ||h2!=null||h3!=null) 
+        document.getElementById("hobby").innerHTML="hobbies are : ";
+
+
+            document.getElementById("hobby1").innerHTML=h1;
+            document.getElementById("hobby2").innerHTML=h2;
+            document.getElementById("hobby3").innerHTML=h3;
+
+
+
+
+// var form=document.getElementById("formId");
+// function submitForm(event){
+
+//    //Preventing page refresh
+//    event.preventDefault();
+// }
+
+// //Calling a function during form submission.
+// form.addEventListener('submit', submitForm);
+
+
+    }
+
+    function log(x){
+        console.log(x);
+    }
+</script>
+
+</body>
+</html> 
+
