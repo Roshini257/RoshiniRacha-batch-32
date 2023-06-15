@@ -1,0 +1,72 @@
+<html>
+    <head>
+
+
+    </head>
+    <body>
+        <script>
+            var newArray = ["listening", "b"];
+            // var elementToDelete = "b";
+                        var elementToDelete = {cooking:"Indian"};
+
+
+            var existingList;
+            var x;
+            const msg ="This the deleted hobby";
+            var index;
+            let result;
+            
+            var Myself = [{
+                fname: 'Roshini',
+                lname: 'Racha',
+                
+                hobbies: [{reading:'novels',
+                    sport:'badminton'},
+                    {cooking:'Indian'}, "dancing"
+                ],               
+                Address:'MckinneyTX',
+                
+                
+            }]
+            
+            print();
+           add();
+           f();
+           del();
+           function print(){
+              existingList = Myself[0].hobbies;
+           log(existingList);
+           }
+     function add()
+     { x= [...existingList,...newArray]
+    log(x);}
+
+
+    function log(v){
+               console.log(v);
+        
+               
+   }
+           function f(){
+    //    console.log("Index is :" +existingList.findIndex(input));
+    //  index= x.findIndex(item => item == Object.keys(elementToDelete));
+        index= x.findIndex(item => item == elementToDelete);
+
+       
+
+       
+    }
+    console.log("Index is :" +index);
+
+    function del(){
+      result=x.splice(index,1);
+    }
+    log(x);
+</script>
+
+<!-- <p><input type="string" id="toCheck" ></p>
+
+<button onclick="myFunction()">Test</button> -->
+
+ </body>
+</html>

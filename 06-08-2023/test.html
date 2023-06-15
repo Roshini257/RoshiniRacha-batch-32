@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <body>
+        <script>
+       function MyObject() {
+  this.n = [44, 22, 7, 1, 9, 5];
+}
+
+MyObject.prototype.sortNum = function() {
+  this.n.sort((a, b) => a - b);
+};
+
+var obj = new MyObject();
+obj.sortNum();
+
+console.log(obj.n);
+console.log("2nd smallest num is:"+obj.n[1]);
+</script>
+    </body>
+</head>
+</html>

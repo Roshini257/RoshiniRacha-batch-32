@@ -1,0 +1,18 @@
+<html>
+  <head>
+    </head>
+    <body>
+    <div id="vertical">
+<table>
+  <tr><td><b> Profile</b></td></tr>
+  <tr><td><b> Contact</b></td></tr>
+  <tr><td><b> Login</b></td></tr>
+  <th>
+    <button *ngIf="login" (click)="login=!login"><b>Log In</b></button>
+   
+   <button *ngIf="!login" (click)="login=!login"><b>Log Out</b></button><th></th>
+    <tr> <td><input type="search"> Search </td></tr>
+</table>
+    </div>
+</body>
+</html>

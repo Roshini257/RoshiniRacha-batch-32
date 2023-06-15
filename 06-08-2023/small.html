@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <body>
+        <script>
+            var numbers={
+                
+               n:[5,8,44,3,12,1],
+
+            }
+     
+     numbers.__proto__.sorting = function(){
+        this.n.sort((a, b) => a - b);
+
+    } 
+
+    numbers.sorting();
+
+    console.log(numbers.n);
+
+        </script>
+    </body>
+</head>
+</html>

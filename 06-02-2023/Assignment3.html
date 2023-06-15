@@ -6,10 +6,24 @@
     <body>
         <script>
             var newArray = ["listening", "b"];
-            var elementToDelete = {cooking:'Indian'};
+            // var elementToDelete ;
+      
+            //  var elementToDelete = "b";
+            var elementToDelete = {cooking:"Indian"};
 
-        //    var updatedList = add(newArray);
-        //     console.log(updatedList);
+            let t=log(typeof elementToDelete);
+
+            log(typeof elementToDelete === "object" && elementToDelete !== null) ;
+             
+        //  let keys =Object.keys(elementToDelete);
+        //  log(keys);
+        //  let text=keys.toString();
+        //  log(text);
+
+          //    function input(){
+        //      return elementToDelete;
+        //    } 
+
 
             var Myself = [{
                 fname: 'Roshini',
@@ -30,59 +44,72 @@
             var existingList;
             var x;
             const msg ="This the deleted hobby";
+             
+        var filteredArray ;
            
            print();
            add();
+        //    f();
            del();
 
            function print(){
               existingList = Myself[0].hobbies;
            log(existingList);
            }
-
-           
-            
-    function add()
+     function add()
      { x= [...existingList,...newArray]
     log(x);}
-
- function del(){
-
-var filteredArray = x.filter(function (obj)
-{
-    return obj.cooking !== elementToDelete.cooking;
-});
-console.log(filteredArray);
-}
-console.log(msg,elementToDelete);
-
-            function log(v){
+    function log(v){
                console.log(v);
         
                
    }
-//     var l = Myself[0].hobbies.length;
-//     console.log(l);
-//     log(Myself[0].hobbies[l-2]);
+    //         function f(){
+    // //    console.log("Index is :" +existingList.findIndex(input));
+    //    console.log("Index is :" +x.findIndex(item => item == elementToDelete));
 
-//           add(newArray); 
-// function add(newArray) {
-//   existingList.push(newArray);
-//   return existingList;
-//   console.log('new list is', existingList);
-// }
+    // }
 
-// function add(existingList,newArray) {
-//   existingList.push(newArray);
-//   return existingList;
-// }
-    
+    function del(){
 
-    
-        
+    if(typeof elementToDelete == "string"){
+        filteredList = x.filter(item => item !== elementToDelete);
+        console.log(filteredList);
+    }
+    else 
+     if (typeof elementToDelete == "object" && elementToDelete !== null){
+       
+        filteredArray  = x.filter(item => item!=elementToDelete.cooking);
+        console.log(filteredArray);
+     }
+
             
+//           filteredArray  = x.filter( function (obj)
+// {
+//     // return obj.cooking !== elementToDelete.cooking;
+//     return obj.cooking !== elementToDelete.cooking;
+//     console.log(filteredArray);
     
-        </script>
+//     });}
+// else{
+//     log("Value not found");
+
+
+// var filteredArray = x.filter(function (obj)
+// {
+//     return obj.cooking !== elementToDelete.cooking;
+
+
+
+// });
+// console.log(filteredArray);
+
+    }
+ </script>
+
+   <!-- <p><input type="string" id="toCheck" ></p>
+
+<button onclick="myFunction()">Test</button> -->
 
     </body>
 </html>

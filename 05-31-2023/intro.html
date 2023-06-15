@@ -12,8 +12,11 @@
                 Gender:'F',
                 Email: 'roshini.racha25@gmail.com',
                 Phoneno: '312-476-9163',
-                hobbies: ["reading","sports",
-                "cooking"],
+                hobbies: [{reading:'novels',
+                    sport:'badminton'},
+                    {cooking:'Indian'}, "dancing"
+                ]
+,
                 
                 
                     
@@ -22,13 +25,17 @@
                 Nationality: 'Indian',
                 
             }
-           log(Myself.hobbies[2]);
+           //log(Myself.hobbies[0]);
 
                 function log(v){
             console.log(v)
         
                
     }
+    var l =Myself.hobbies.length;
+    console.log(l);
+    log(Myself.hobbies[l-2]);
+
     
 </script>
         <h1>
