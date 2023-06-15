@@ -1,0 +1,18 @@
+header {
+    background-color: rgb(0, 85, 255);
+  }
+  table {
+    padding: 30px;
+    
+  }
+  
+  th{
+    float: right;
+    padding: 10px;
+    font-size: 20px;
+    font-style: italic;
+    color: beige;
+  }
+  button{
+    size: 55cm;
+  }
