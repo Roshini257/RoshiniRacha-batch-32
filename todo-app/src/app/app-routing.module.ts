@@ -1,7 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { LoginComponent } from './Login/Login.component';
+import { ProfileComponent } from './Profile/Profile.component';
+import { LogoutComponent } from './logout/logout.component';
+import { AuthGuard } from './guards/auth.guards';
+
+
+
+const routes: Routes = [{
+  path:'login',
+  component:LoginComponent
+},{
+  path:'profile',
+  component:ProfileComponent,canActivate: [AuthGuard] 
+},{
+  path:'logout',
+  component:LogoutComponent
+}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,6 +1,8 @@
+<!-- <div class="topContainer"> -->
+	<!-- <a [routerLink]="['/profile']" routerLinkActive="active">Profile</a> -->
+	<app-accounts-info [accountInfo]="profileInfo.accounts"></app-accounts-info>
 
 
-<div class="topContainer">
 	<div class="main">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
 
@@ -25,13 +27,5 @@
 					<button (click)="onLogin()">Login</button>
 				</form>
 			</div>
-      <h1>Profile</h1>
-<div *ngFor="let item of signupUsers">
-  <p>Name : {{signupUsers[0].userName}}</p>
-</div>
-
-
-     
-
 	</div>
-</div>
+<!-- </div> -->

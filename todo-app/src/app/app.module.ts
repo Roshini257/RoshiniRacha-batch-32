@@ -9,13 +9,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Header/Header.component';
 import { NavigationComponent } from './Navigation/Navigation.component';
 import { LoginComponent } from './Login/Login.component';
+import { ProfileComponent } from './Profile/Profile.component';
+import { AccountsInfoComponent } from './accounts-info/accounts-info.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [							
     AppComponent,
       HeaderComponent,
       NavigationComponent,
-      LoginComponent
+      LoginComponent,
+      ProfileComponent,
+      AccountsInfoComponent,
+      LogoutComponent
    ],
   imports: [
     BrowserModule,

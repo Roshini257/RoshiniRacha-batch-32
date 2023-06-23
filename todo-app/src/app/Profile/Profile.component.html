@@ -1,0 +1,18 @@
+ <body>
+    <h1>Profile</h1>
+    <!-- <img class="profile-image" src="profile-image.jpg" alt="Profile Image"> -->
+    <p>First Name:{{profileInfo.fn}}</p>
+    <p>Last Name:{{profileInfo.ln}}</p>
+    <p>Location:Texas</p>
+    <p>Email: {{profileInfo.email}}</p>
+    <p>Phone:{{profileInfo.phone}}</p>
+ <!-- <a [routerLink]="['/logout']" routerLinkActive="active">Logout</a></li> -->
+ <button (click)="navigateToPage()">Logout</button>
+
+
+</body>
+<app-accounts-info
+(onAccountSelect)="onAccountselectedInfo($event)" 
+[accountInfo]="profileInfo.accounts"></app-accounts-info>
+
+
